@@ -141,7 +141,7 @@ BOOTSTRAP3 = {
 # Heroku settings
 cwd = os.getcwd()
 if cwd == '/app' or cwd[:4] == '/tmp':
-    
+
     import dj_database_url
     DATABASES = {
         'default': dj_database_url.config(default='postgres://localhost')
@@ -151,7 +151,7 @@ if cwd == '/app' or cwd[:4] == '/tmp':
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     
     # Only allow heroku to host the project.
-    ALLOWED_HOSTS = ['learning-log-final.herokuapp.com']
+    ALLOWED_HOSTS = ['*']
     DEBUG = False
 
     # Static asset configuration
